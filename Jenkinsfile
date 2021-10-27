@@ -31,7 +31,7 @@ pipeline{
                 [
                     [artifactId: "${ArtifactId}",
                     classifier: '', 
-                    file: "target/${ArtifactId}-${Version}.war", 
+                    file: "target\\${ArtifactId}-${Version}.war", 
                     type: 'war']], 
                     credentialsId: 'ae9cb28a-cac6-4817-ba40-7f2bac65b8c3', 
                     groupId: "${GroupId}", 
