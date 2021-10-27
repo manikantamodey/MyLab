@@ -30,7 +30,7 @@ pipeline{
                 [
                     [artifactId: 'ManisDevOpsLab',
                     classifier: '', 
-                    file: 'target\\ManisDevOpsLab-0.0.2-SNAPSHOT.war', 
+                    file: 'target\\ManisDevOpsLab-0.0.3-SNAPSHOT.war', 
                     type: 'war']], 
                     credentialsId: 'ae9cb28a-cac6-4817-ba40-7f2bac65b8c3', 
                     groupId: 'com.manidevopslab', 
