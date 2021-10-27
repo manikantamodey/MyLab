@@ -4,7 +4,7 @@
   <groupId>com.manidevopslab</groupId>
   <artifactId>ManisDevOpsLab</artifactId>
   <packaging>war</packaging>
-  <version>0.0.4-SNAPSHOT</version>
+  <version>0.0.5-SNAPSHOT</version>
   <name>ManisDevOpsLab</name>
   <url>http://maven.apache.org</url>
   <dependencies>
