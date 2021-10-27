@@ -9,7 +9,7 @@ pipeline{
         ArtifactId = readMavenPom().getArtifactId()
         GroupID = readMavenPom().getGroupId()
         Version = readMavenPom().getVersion()
-        Filename = readMavenPom().getFilename()
+        
         }
 
     stages {
@@ -29,7 +29,7 @@ pipeline{
                 [
                     [artifactId: "${ArtifactId}",
                     classifier: '', 
-                    file: 'target\\ManisDevOpsLab-0.0.4-SNAPSHOT.war', 
+                    file: 'target/ManisDevOpsLab-0.0.4-SNAPSHOT.war', 
                     type: 'war']], 
                     credentialsId: 'ae9cb28a-cac6-4817-ba40-7f2bac65b8c3', 
                     groupId: "${GroupId}", 
