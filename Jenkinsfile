@@ -44,6 +44,12 @@ pipeline{
             }
 
         }
+
+        //stage3: Download artifact to Ansible from Nexus
+        stage ('Download to Ansible'){
+            echo "Downloading later"
+
+        }
     }
 
         
