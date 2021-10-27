@@ -5,6 +5,12 @@ pipeline{
         maven 'maven'
     }
 
+    environment {
+        ArtifactId = readMavenPom().getArtifactId()
+        GroupID = readMavenPom().getGroupId()
+        Version = readMavenPom().getVersion()
+        }
+
     stages {
         // Specify various stage with in stages
 
@@ -20,17 +26,17 @@ pipeline{
             steps {
                 nexusArtifactUploader artifacts: 
                 [
-                    [artifactId: 'ManisDevOpsLab',
+                    [artifactId: "${ArtifactId}",
                     classifier: '', 
                     file: 'target\\ManisDevOpsLab-0.0.3-SNAPSHOT.war', 
                     type: 'war']], 
                     credentialsId: 'ae9cb28a-cac6-4817-ba40-7f2bac65b8c3', 
-                    groupId: 'com.manidevopslab', 
+                    groupId: "${GroupId}", 
                     nexusUrl: '13.59.169.237:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'ManisDevopsLab-SNAPSHOT', 
-                    version: '0.0.3-SNAPSHOT'
+                    version: "${Version}"
                 }
 
             }
