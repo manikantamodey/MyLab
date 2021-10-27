@@ -23,7 +23,7 @@ pipeline{
             }
         }
 
-        // Stage3 : Publish the source code to Sonarqube
+        // Stage3 : Publish the source code to Nexus
         stage ('Deploy'){
             steps {
                 echo 'Deploying.....'
